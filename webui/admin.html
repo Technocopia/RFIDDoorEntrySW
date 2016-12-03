@@ -130,26 +130,26 @@
     
     <div class="four fields">
             <div class="field">
-       <label class="ui orange">Site Start Bit</label>
+       <label class="ui orange"><a class="ui red empty circular label"></a>Site Start Bit </label>
         <input type="text" name="sitestartbit" placeholder="1">
         </div>
                 <div class="field">
-       <label>Site Length</label>
+       <label><a class="ui red empty circular label"></a>Site Length </label>
         <input type="text" name="sitelength" placeholder="7">
         </div>
         
                     <div class="field">
-       <label>ID Start Bit</label>
+       <label><a class="ui green empty circular label"></a>ID Start Bit </label>
         <input type="text" name="idstartbit" placeholder="9">
         </div>
                 <div class="field">
-       <label>ID Length</label>
+       <label><a class="ui green empty circular label"></a>ID Length </label>
         <input type="text" name="idlength" placeholder="24">
         </div>
     </div>
-        <div class="four fields">
+        <div class="four fields" id="par1fields">
             <div class="field">
-       <label>Parity Type</label>
+       <label><a class="ui orange empty circular label"></a>Parity Type </label>
         <select class="ui fluid search dropdown" name="parity1type">
           <option value="odd">Odd</option>
           <option value="none">None</option>
@@ -157,23 +157,23 @@
         </select>
         </div>
                 <div class="field">
-       <label>Parity Position</label>
+       <label><a class="ui orange empty circular label"></a>Parity Position </label>
         <input type="text" name="parity1pos" placeholder="0">
         </div>
         
                     <div class="field">
-       <label>Bits to Sum</label>
+       <label><a class="ui orange empty circular label"></a>Bits to Sum </label>
         <input type="text" name="parity1bits" placeholder="7">
         </div>
                 <div class="field">
-       <label>Start Bit</label>
+       <label><a class="ui orange empty circular label"></a>Start Bit </label>
         <input type="text" name="parity1start" placeholder="1">
         </div>
     </div>
     
-        <div class="four fields">
+        <div class="four fields" id="par2fields">
             <div class="field">
-       <label>Parity Type</label>
+       <label><a class="ui teal empty circular label"></a>Parity Type</label>
         <select class="ui fluid search dropdown" name="parity2type">
           <option value="even">Even</option>
           <option value="none">None</option>
@@ -181,16 +181,16 @@
         </select>
         </div>
                 <div class="field">
-       <label>Parity Position</label>
+       <label><a class="ui teal empty circular label"></a>Parity Position</label>
         <input type="text" name="parity2pos" placeholder="32">
         </div>
         
                     <div class="field">
-       <label>Bits to Sum</label>
+       <label><a class="ui teal empty circular label"></a>Bits to Sum</label>
         <input type="text" name="parity2bits" placeholder="24">
         </div>
                 <div class="field">
-       <label>Start Bit</label>
+       <label><a class="ui teal empty circular label"></a>Start Bit</label>
         <input type="text" name="parity2start" placeholder="9">
         </div>
     </div>
@@ -205,7 +205,7 @@
     <div class="field">
       <div class="ui toggle checkbox">
         <input type="checkbox" name="updatecards" tabindex="0">
-        <label>Update Cards</label>
+        <label>Sync Cards</label>
       </div>
     </div>
     <div class="field">
