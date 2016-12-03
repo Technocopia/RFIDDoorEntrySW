@@ -1,0 +1,84 @@
+512k eeprom.
+32,000-2 cards
+1k eeprom
+64-2 cards
+
+
+first 32 bytes of eeprom. [byte] unless otherwise specified. [#:] # bits.
+
+card params.
+[site start][site len][id start][id len]
+[par type][par bit][par start][par end]
+[par2 type][par2 bit][par2 start][par2 end]
+
+open hours and config.
+[ignore par][ignore site][ignore id][rsvd]
+[rsvd]
+[open door entry 1-2 (same format as hours info)]
+[open door entry 3-4 (same format as hours info)]
+
+
+
+id info 8 bytes.
+[ID info]
+[ID info]
+[site bits byte aligned ][id bits byte aligned]
+example 7 site 24 id
+sssssssx iiiiiiii iiiiiiii iiiiiiii
+00000000 00000000 00000000 00000000
+
+s: site
+x: padding to byte boundry
+i: id
+0: un used
+
+example 9 bit site 24 bit id
+ssssssss sxxxxxxx iiiiiiii iiiiiiii
+iiiiiiii 00000000 00000000 00000000
+
+s: site
+x: padding to byte bountry
+i: ID
+0: unused
+
+
+
+hours info 8 bytes. 4 ranges. 4 bits hour 2 bits minute. granularity of 30 min.
+entry is 2 bytes.
+[4:day][6:s][6:e][4:day][6:s][6:e]
+[4:day][6:s][6:e][4:day][6:s][6:e]
+
+day bytes.
+0000  no record.
+1111  no record
+0001  weekday
+0010  weekend
+0011  mon
+0100  tues
+0101  wed
+0110  thurs
+0111  fri
+1000  sat
+1001  sun
+1010  every day
+
+5 bits hour
+00000  0:00
+00001  1:00
+00010  2:00
+00011  3:00
+...
+11000  24:00
+
+1 bit minute
+0 :00
+1 :30
+
+example: 010010 5:00pm
+
+full record (16 bits 2 bytes)
+0001 (weekday) 010001 (8:30am) 010010 (5:00pm)
+0010 (weekend) 000000 (12am)   11000(11:59pm) 
+
+00010100 01010010 00100000 00110000
+00000000 00000000 00000000 00000000
