@@ -1,0 +1,47 @@
+[  
+   {  
+      "name":{  
+         "first":"Joe",
+         "last":"Schmoe"
+      },
+      "card":{  
+         "site":"",
+         "id":""
+      },
+      "hours":[  
+         {  
+            "day":"wkd",
+            "range":[  
+               900,
+               1700
+            ]
+         },
+         {  
+            "day":"wke",
+            "range":[  
+               900,
+               1700
+            ]
+         }
+      ]
+   },
+{  
+      "name":{  
+         "first":"Jane",
+         "last":"Doe"
+      },
+      "card":{  
+         "site":"",
+         "id":""
+      },
+      "hours":[  
+         {  
+            "day":"week",
+            "range":[  
+               0,
+               2400
+            ]
+         }
+      ]
+   }
+]

@@ -1,0 +1,10 @@
+[
+{ "site":"17","id":"774653","access":{"result":"Denied","message":"Invalid Site"}},
+{ "site":"17","id":"774651","access":{"result":"Granted"}},
+{ "site":"17","id":"774653","access":{"result":"Denied","message":"Invalid ID"}},
+{ "site":"17","id":"774651","access":{"result":"Granted"}},
+{ "site":"17","id":"774651","access":{"result":"Granted"}},
+{ "site":"17","id":"774673","access":{"result":"Warning","message":"Parity Error"}},
+{ "site":"17","id":"774651","access":{"result":"Granted"}},
+{ "site":"17","id":"774673","access":{"result":"Denied","message":"Parity Error"}}
+]
