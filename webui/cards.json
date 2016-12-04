@@ -5,19 +5,19 @@
          "last":"Schmoe"
       },
       "card":{  
-         "site":"",
-         "id":""
+         "site":"17",
+         "id":"654365"
       },
       "hours":[  
          {  
-            "day":"wkd",
+            "day":"weekday",
             "range":[  
                900,
                1700
             ]
          },
          {  
-            "day":"wke",
+            "day":"weekend",
             "range":[  
                900,
                1700
@@ -31,12 +31,12 @@
          "last":"Doe"
       },
       "card":{  
-         "site":"",
-         "id":""
+         "site":"17",
+         "id":"986437"
       },
       "hours":[  
          {  
-            "day":"week",
+            "day":"everyday",
             "range":[  
                0,
                2400
