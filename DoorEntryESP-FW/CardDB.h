@@ -11,18 +11,37 @@
 #define sunday    0x9
 #define everyday  0xa
 
-uint8_t dummyRead(uint16_t addr);
-void dummyWrite(uint16_t addr);
+typedef struct{
+  unsigned int   rday:4;
+  unsigned int   rtimein:6;
+  unsigned int   rtimeout:6;
+} timedur_s;
 
-uint32_t DB_getSite(uint16_t index,uint8_t siteb,uint8_t idb);
-uint32_t DB_getID(uint16_t index,uint8_t siteb,uint8_t idb);
-uint8_t  DB_getTime(uint16_t index,uint8_t slot);
-uint8_t  DB_getDay(uint16_t index,uint8_t slot);
+typedef union{
+  timedur_s   f;
+  uint16_t    w;
+} timedur;
 
-uint32_t DB_settSite(uint32_t site, uint16_t index,uint8_t siteb,uint8_t idb);
-uint32_t DB_setID(uint32_t id, uint16_t index,uint8_t siteb,uint8_t idb);
-uint8_t  DB_setTime(uint8_t itime,uint16_t index,uint8_t slot);
-uint8_t  DB_setDay(uint8_t iday,uint16_t index,uint8_t slot);
+typedef struct{
+  uint8_t      magic;
+  uint8_t      rsvd;
+  uint16_t     site;
+  uint32_t     id;
+  timedur    hours[4];
+} card_record_s;
+
+typedef union{
+  card_record_s f;
+  uint8_t       b[16];
+} card_record;
+
+
+uint8_t          dummyRead(uint16_t addr);
+void          dummyWrite(uint16_t addr,uint8_t data);
+
+card_record   dbGetCard(uint16_t index);
+void          dbSetCard(card_record r, uint16_t index);
+
 
 
 
