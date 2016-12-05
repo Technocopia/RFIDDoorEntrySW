@@ -37,7 +37,23 @@ void setup(void){
 
  initHTTP();
  Serial.println("HTTP server started");
+
+ Serial.println("Card Test");
+ card_record c;
+ for (int i=0; i<16; i++) c.b[i]=0;
+
+ c.f.magic='r';
+ c.f.site=17;
+ c.f.id=765432;
+ c.f.hours[0].f.rday=monday;
+ c.f.hours[0].f.rtimein=7*2;
+ c.f.hours[0].f.rtimeout=17*2;
+ Serial.println(sizeof(timedur_s));
+
+ updateEEPROM("/cards.json");
+
 }
+
 
 void loop(void){
   handleclient();
