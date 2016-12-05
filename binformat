@@ -20,27 +20,7 @@ open hours and config.
 
 
 id info 8 bytes.
-[ID info]
-[ID info]
-[site bits byte aligned ][id bits byte aligned]
-example 7 site 24 id
-sssssssx iiiiiiii iiiiiiii iiiiiiii
-00000000 00000000 00000000 00000000
-
-s: site
-x: padding to byte boundry
-i: id
-0: un used
-
-example 9 bit site 24 bit id
-ssssssss sxxxxxxx iiiiiiii iiiiiiii
-iiiiiiii 00000000 00000000 00000000
-
-s: site
-x: padding to byte bountry
-i: ID
-0: unused
-
+[magic 'r'][ site 2 bytes ][ id 5 bytes]
 
 
 hours info 8 bytes. 4 ranges. 4 bits hour 2 bits minute. granularity of 30 min.
